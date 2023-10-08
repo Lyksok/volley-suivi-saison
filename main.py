@@ -8,13 +8,15 @@ def main():
         print("0. Quitter")
         print("1. Ajouter un score")
         print("2. Visualiser les scores")
-        print("3. Graphique de saison")
+        print("3. Graphiques de saison")
         resp = input("\nVotre choix: ")
 
-        if (resp == "0"):
-            break
-        elif (resp=="1"):
+        if resp == "1":
             ff.addScore()
+        if resp == "2":
+            print("Cette fonctionnalitée n'est pas encore disponible :(")
+        if resp == "3":
+            ff.makeGraph()
 
     print("Fermeture de l'application ...")
     return

@@ -1,2 +1,4 @@
 .idea
 venv
+*.pyc
+ffvolleyAPI/__pycache__
