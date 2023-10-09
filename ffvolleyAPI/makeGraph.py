@@ -1,4 +1,4 @@
-from ._timeRanking import timeRanking
+from ._timeRanking import timeRankRanking
 
 
 def makeGraph():
@@ -12,6 +12,6 @@ def makeGraph():
         resp = input("\n Votre choix: ")
 
         if resp == "1":
-            timeRanking()
+            timeRankRanking()
 
     print()

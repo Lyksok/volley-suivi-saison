@@ -44,13 +44,28 @@ def __assignRank(l_of_teams: list) -> list:
     return new_list
 
 
+def findTeamData(semaine: list, team) -> dict:
+    for i in semaine:
+        if i["team"] == team:
+            return i
+
+
 def __drawGraph(classements: list):
     x = [i for i in range(1, len(classements) + 1)]
-    # TODO : make Y axis for graph
+    for team in getTeams().keys():
+        y = []
+        for semaine in classements:
+            team_info = findTeamData(semaine, team)
+            y.append(team_info["rank"])
+        plt.plot(x, y, label=getTeams()[team])
 
+    plt.xlabel("Semaines")
+    plt.ylabel("Equipes")
+    plt.legend()
+    plt.title("Classement des équipes par classement chaque semaine")
+    plt.plot()
 
-
-def timeRanking():
+def timeRankRanking():
     data = getData()
     teams = getTeams()
 
